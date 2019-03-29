@@ -1,28 +1,46 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <center>
+      <h1>Diagrams sample</h1>
+      <diagram :model="model"></diagram>
+    </center>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import { Diagram } from "vue-diagrams";
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  name: "app",
+  data() {
+    const diagramModel = new Diagram.Model();
 
+    const node1 = diagramModel.addNode("test2", 300, 200);
+    const inPort = node1.addInPort("test");
+
+    const node2 = diagramModel.addNode("test", 10, 300, 144, 80);
+    const node2OutPort = node2.addOutPort("testOut");
+    node2.addOutPort("testOut2");
+    node2.color = "#00cc66";
+
+    const node3 = diagramModel.addNode("test3", 10, 100, 72, 100);
+    const node3OutPort = node3.addOutPort("testOut3");
+    node3.color = "#cc6600";
+
+    diagramModel.addLink(node2OutPort, inPort);
+    diagramModel.addLink(node3OutPort, inPort);
+
+    return {
+      model: diagramModel
+    };
+  },
+
+  components: {
+    Diagram
+  }
+};
+</script>
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  font-family: sans-serif;
 }
 </style>

@@ -2741,6 +2741,11 @@ dotenv@^6.2.0:
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-6.2.0.tgz#941c0410535d942c8becf28d3f357dbd9d476064"
   integrity sha512-HygQCKUBSFl8wKQZBSemMywRWcEDNidvNbjGVyZu3nbZ8qq9ubiPoGLMdRDpfSrpkkm9BXYFkpKxxFX38o/76w==
 
+draggable-vue-directive@^1.1.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/draggable-vue-directive/-/draggable-vue-directive-1.2.0.tgz#f784d23b93308a59ca38d809d3bd8069f615740d"
+  integrity sha512-J/63ZiJvXGv0siV14C7QFoN4/dt4eEczSG+6oKUjoGojYMSew/b7p10LlDPF2ejXM06ciNs6EY+nPadeGVmnpA==
+
 duplexer@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
@@ -7102,6 +7107,11 @@ supports-color@^6.1.0:
   dependencies:
     has-flag "^3.0.0"
 
+svg-pan-zoom@^3.5.3:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/svg-pan-zoom/-/svg-pan-zoom-3.6.0.tgz#31d8137d7e079e8f059effd85c7605b0567b6e4b"
+  integrity sha512-ZBEL2z/n/W2fLLFzn3NTQgd+7QEfbrKvKmu29U3qvMflmJgLaWkwKbOzWJYESFidTiGYMHkijAKmY6m64moyYg==
+
 svg-tags@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/svg-tags/-/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
@@ -7572,6 +7582,15 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
+vue-diagrams@^0.0.1-development:
+  version "0.0.1-development"
+  resolved "https://registry.yarnpkg.com/vue-diagrams/-/vue-diagrams-0.0.1-development.tgz#7102b8721cbebcc42469fe9c81aca410d39b3569"
+  integrity sha512-KjiTpYiaThV6RXnyH7BxvXVnLVoICB+847Nrj6R+Y+m7s2Ys0Dx1LJOCvyl70Kkr+0T8CTqWfo5cNCVTPUv9Qw==
+  dependencies:
+    draggable-vue-directive "^1.1.0"
+    svg-pan-zoom "^3.5.3"
+    vue-svg-pan-zoom "^0.1.0"
+
 vue-eslint-parser@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-2.0.3.tgz#c268c96c6d94cfe3d938a5f7593959b0ca3360d1"
@@ -7619,6 +7638,13 @@ vue-style-loader@^4.1.0:
   dependencies:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
+
+vue-svg-pan-zoom@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/vue-svg-pan-zoom/-/vue-svg-pan-zoom-0.1.0.tgz#53cb10585c53eea85c5b4a83d862b14da81ef11d"
+  integrity sha1-U8sQWFxT7qhcW0qD2GKxTage8R0=
+  dependencies:
+    svg-pan-zoom "^3.5.3"
 
 vue-template-compiler@^2.5.21:
   version "2.6.10"
